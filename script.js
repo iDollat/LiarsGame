@@ -49,7 +49,7 @@ function updateUserList() {
   users.forEach((user, index) => {
     const li = document.createElement("li");
     li.className = "user-item";
-    li.textContent = `${user.name} (Max roll: ${user.maxRoll})`;
+    li.textContent = user.name;
     li.onclick = () => removeUser(index);
     userList.appendChild(li);
   });
