@@ -1,0 +1,181 @@
+/* Styl ogólny dla strony */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Ciemne tło */
+  color: #e0e0e0; /* Jasnoszary tekst */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styl dla sekcji dodawania graczy */
+.container {
+  width: 100vh;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1e1e1e; /* Ciemniejsze tło dla sekcji */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.container h2 {
+  margin-bottom: 15px;
+  color: #4caf50; /* Zieleń */
+}
+
+.container input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #333; /* Ciemniejsze tło inputa */
+  color: #fff; /* Biały tekst w polu */
+}
+
+.container button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #4caf50; /* Zielony przycisk */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  background-color: #45a049;
+}
+
+/* Styl dla listy użytkowników jako przycisków */
+.user-item {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  background-color: #333; /* Ciemne tło */
+  color: #e0e0e0; /* Jasny tekst */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.user-item:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Styl dla sekcji gry */
+#gameArea {
+  width: 100vh;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-height: 500px; /* Możesz dostosować wysokość sekcji gry */
+}
+
+#drawnCard {
+  font-size: 24px;
+  margin: 15px 0;
+  font-weight: bold;
+  color: #4caf50; /* Zielona litera */
+}
+
+#gameStatus {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #e0e0e0; /* Jasnoszary tekst */
+}
+
+/* Styl przycisków w sekcji gry */
+#gameArea button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #4caf50; /* Zielony przycisk */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#gameArea button:hover {
+  background-color: #45a049;
+}
+
+/* Lista graczy w sekcji gry */
+#playersList {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+  max-height: 300px; /* Ustawiamy maksymalną wysokość dla listy graczy */
+  overflow-y: auto; /* Przewijanie pionowe */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#playersList .user-item {
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Styl dla przycisku resetowania gry */
+.reset-button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #f44336; /* Czerwony przycisk resetu */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #e53935;
+}
+
+/* Animacja dla tekstu */
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Styl animacji dla wyświetlania litery */
+.flicker-text {
+  font-size: 24px;
+  font-weight: bold;
+  animation: flicker 0.1s linear infinite;
+}

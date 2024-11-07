@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liar's Bar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Sekcja dodawania użytkowników -->
+    <div class="container">
+      <h2>Add Players</h2>
+      <input type="text" id="userNameInput" placeholder="Enter player name" />
+      <button onclick="addUser()">Add Player</button>
+      <ul id="userList"></ul>
+      <button id="startGameBtn" onclick="startGame()">Proceed</button>
+    </div>
+
+    <!-- Sekcja gry, początkowo ukryta -->
+    <div id="gameArea" style="display: none">
+      <div id="drawnCard">Card:</div>
+      <button onclick="drawCard()">Draw Card</button>
+      <p id="gameStatus"></p>
+      <ul id="playersList"></ul>
+      <!-- Przycisk powrotu do dodawania graczy -->
+      <button onclick="returnToPlayerAddition()">
+        Return to Player Addition
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
